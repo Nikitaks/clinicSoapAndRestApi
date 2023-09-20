@@ -63,20 +63,28 @@
 
 ```
 GET
-/slot/get/free
+/slot/get/free?doctorId={integer}&dateString={string}
 Получить свободные слоты времени для указанного доктора на указанную дату
+Пример:
+/slot/get/free?doctorId=1&dateString=2023-09-19
 
 GET
-/slot/get/occupied/id
+/slot/get/occupied/id?patientId={integer}
 Получить слоты времени, занятые указанным пациентом по id
+Пример:
+/slot/get/occupied/id?patientId=1
 
 GET
-/slot/get/occupied/uuid
+/slot/get/occupied/uuid?uuid={string}
 Получить слоты времени, занятые указанным пациентом по uuid
+Пример:
+/slot/get/occupied/uuid?uuid=e7077bea-5249-4bc8-b491-9aec257b3934
 
 POST
-/slot/occupy
+/slot/occupy?slotId={integer}&patientId={integer}
 Занять слот времени по id пациента и id слота
+Пример:
+/slot/occupy?slotId=10&patientId=1
 ```
 #### Описание SOAP-сервиса
 
